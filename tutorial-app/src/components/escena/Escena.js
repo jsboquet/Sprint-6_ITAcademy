@@ -1,8 +1,5 @@
-function Escena() {
-  const text =
-    "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial";
-
-  return <p>{text}</p>;
+function Escena({ content }) {
+  return <p>{content}</p>;
 }
 
 export default Escena;

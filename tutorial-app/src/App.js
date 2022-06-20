@@ -1,9 +1,12 @@
 import Escena from "./components/escena/Escena";
+import textos from "./assets/textos";
 
 function App() {
   return (
-    <div className="App">
-      <Escena />
+    <div>
+      {textos.map((text, index) => (
+        <Escena content={text} key={index} />
+      ))}
     </div>
   );
 }
