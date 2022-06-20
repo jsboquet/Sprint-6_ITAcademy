@@ -1,3 +1,4 @@
+import React from "react";
 import Escena from "./components/escena/Escena";
 import textos from "./assets/textos";
 
