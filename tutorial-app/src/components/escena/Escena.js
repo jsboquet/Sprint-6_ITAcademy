@@ -1,4 +1,3 @@
-import React from "react";
 import { PillDiv } from "../styled/styled";
 
 function Escena({ content, active }) {

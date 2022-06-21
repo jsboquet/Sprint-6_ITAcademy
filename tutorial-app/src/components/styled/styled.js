@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  display: ${(props) => (props.welcome ? "flex" : "default")};
+  height: ${(props) => (props.welcome ? "90vh" : "auto")};
+  justify-content: ${(props) => (props.welcome ? "center" : "auto")};
+  flex-flow: column;
   width: 100vw;
   text-align: center;
 `;
