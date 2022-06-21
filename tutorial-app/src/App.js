@@ -9,12 +9,12 @@ function App() {
   const [current, setCurrent] = useState(0);
   function decrementCount() {
     setCurrent((prevCount) =>
-      prevCount - 1 < 0 ? textos.length - 1 : prevCount - 1
+      prevCount - 1 < 0 ? textos.length - 1 : --prevCount
     );
   }
   function incrementCount() {
     setCurrent((prevCount) =>
-      prevCount + 1 > textos.length - 1 ? 0 : prevCount + 1
+      prevCount + 1 > textos.length - 1 ? 0 : ++prevCount
     );
   }
 
@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <Container welcome={start}>
+    <Container welcome={start} bg={textos[current].img}>
       {start ? (
         <Welcome>
           <button onClick={startApp}>Començar!</button>
@@ -34,11 +34,11 @@ function App() {
         <>
           <Boton onClick={decrementCount}>Anterior</Boton>
           <Boton onClick={incrementCount}>Següent</Boton>
-          {textos.map((text, index) =>
+          {textos.map((content, index) =>
             index === current ? (
-              <Escena content={text} key={index} active />
+              <Escena content={content.text} key={index} active />
             ) : (
-              <Escena content={text} key={index} />
+              <Escena content={content.text} key={index} />
             )
           )}
         </>

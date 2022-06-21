@@ -8,8 +8,13 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: ${(props) => (props.welcome ? "flex" : "default")};
-  height: ${(props) => (props.welcome ? "90vh" : "auto")};
+  height: ${(props) => (props.welcome ? "90vh" : "100vh")};
   justify-content: ${(props) => (props.welcome ? "center" : "auto")};
+  background-image: url(${(props) => props.bg});
+  background: ${(props) => (props.welcome ? "none" : "default")};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   flex-flow: column;
   width: 100vw;
   text-align: center;
@@ -22,7 +27,7 @@ export const PillDiv = styled.div`
   border: 3px solid black;
   border-radius: 500px;
   background-color: ${(props) =>
-    props.active ? "salmon" : "rbga(255, 255, 255, 0.6)"};
+    props.active ? "salmon" : "rgba(255, 255, 255, 0.5)"};
 `;
 
 export const Boton = styled.button`
