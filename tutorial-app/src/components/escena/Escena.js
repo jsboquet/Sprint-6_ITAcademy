@@ -1,8 +1,8 @@
 import React from "react";
-import { PillDiv } from "../styled/styled.js";
+import { PillDiv } from "../styled/styled";
 
-function Escena({ content }) {
-  return <PillDiv>{content}</PillDiv>;
+function Escena({ content, active }) {
+  return <PillDiv active={active}>{content}</PillDiv>;
 }
 
 export default Escena;
