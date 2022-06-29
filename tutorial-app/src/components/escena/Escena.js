@@ -1,8 +1,7 @@
-function Escena() {
-  const text =
-    "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial";
+import { PillDiv } from "../styled/styled";
 
-  return <p>{text}</p>;
+function Escena({ content, active }) {
+  return <PillDiv active={active}>{content}</PillDiv>;
 }
 
 export default Escena;
